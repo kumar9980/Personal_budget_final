@@ -1,0 +1,133 @@
+@import url('semantic-ui-css/semantic.min.css');
+
+.dashboard .budget-card {
+	display: flex;
+	justify-content: center;
+	background-size: cover;
+	width: 100%;
+	background-color: white;
+}
+
+.dashboard .budget-card .budget-heading {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.budget-card .budget-heading h3 {
+	font-size: 1.5em;
+	font-style: bold;
+	margin-bottom: 15px;
+}
+
+.budget-card .budget-content {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 10px;
+}
+
+.budget-card .budget-content .budget-form .form-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.budget-card .budget-content .budget-form .form-content .form-group {
+	transition: all 0.3s;
+}
+
+.budget-card
+	.budget-content
+	.budget-form
+	.form-content
+	.form-group
+	.form-label {
+	font-size: 1em;
+	margin-left: 10px;
+	color: black;
+	display: block;
+	opacity: 1;
+	transform: translateY(-2.45em);
+	transform-origin: 0 0;
+	transition: all 0.3s;
+}
+
+.budget-card
+	.budget-content
+	.budget-form
+	.form-content
+	.form-group
+	.form-control {
+	box-shadow: none;
+	border-style: none none none none;
+	transition: all 0.5s;
+}
+
+.budget-card
+	.budget-content
+	.budget-form
+	.form-content
+	.form-group
+	.form-control::placeholder {
+	color: transparent;
+}
+
+.budget-card
+	.budget-content
+	.budget-form
+	.form-content
+	.form-group
+	.form-control:focus
+	+ .form-label,
+.budget-card
+	.budget-content
+	.budget-form
+	.form-content
+	.form-group
+	.form-control:not(:placeholder-shown)
+	+ .form-label {
+	transform: translateY(-3.3em) scale(0.8);
+}
+
+.budget-card .budget-content .budget-form input {
+	width: 18rem;
+	height: 50px;
+	border-radius: 6px;
+	background-color: var(--form-color);
+	font-size: 14px;
+}
+
+.budget-card .budget-content .budget-form select {
+	width: 18rem;
+	height: 50px;
+	background-color: var(--form-color);
+	text-indent: 5px;
+	color: black;
+	font-size: 1em;
+	padding-left: 8px;
+}
+
+.budget-card .budget-content .budget-form .submit-button {
+	background-color: #b34d4d;
+	color: rgb(223, 230, 240);
+	font-size: 18px;
+	width: 10rem;
+	margin: auto;
+}
+
+.budget-card .budget-content .budget-form .submit-button:hover {
+	background-color: white;
+	color: black;
+}
+
+.budget-card .budget-content .budget-form .form-group input[type='text'] {
+	padding-top: 5px;
+	padding-left: 8px;
+	font-size: 14px;
+}
+
+.budget-card .budget-content .budget-form .form-group input[type='number'] {
+	padding-top: 5px;
+	padding-left: 8px;
+	font-size: 14px;
+}

@@ -1,0 +1,53 @@
+{
+	"name": "personal_budget",
+	"version": "1.0.0",
+	"description": "Personal Budget Application",
+	"main": "index.js",
+	"scripts": {
+		"client-install": "npm install --prefix client",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+	},
+	"author": "KUMAR MANI CHANDRA YELISETTY",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.21.0",
+		"compression": "^1.7.4",
+		"concurrently": "^5.3.0",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-jwt": "^6.0.0",
+		"jsonwebtoken": "^8.5.1",
+		"mockgoose": "^8.0.4",
+		"mongoose": "^5.10.13",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.6",
+		"supertest": "^6.0.1",
+		"uuid": "^8.3.1",
+		"validator": "^13.1.17"
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
+		"cross-env": "^7.0.2",
+		"faker": "^5.1.0",
+		"mocha": "^8.2.1",
+		"nyc": "^15.1.0",
+		"rewire": "^5.0.0",
+		"sinon": "^9.2.1",
+		"sinon-chai": "^3.5.0"
+	},
+	"nyc": {
+		"exclude": [
+			"__tests__",
+			"node_modules"
+		],
+		"cache": false,
+		"report-dir": "./__tests__/report"
+	}
+}
